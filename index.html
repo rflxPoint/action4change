@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Action 4 Change</title>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+    </head>
+
+    <body style="background-color: #6DD472;">
+
+        <div class="row" style="background-color: #659965";>
+            <div class="image-container"><img id="Logo" src="img/LogoM.png" onmouseover="this.src='img/Logo.png';" onmouseout="this.src='img/LogoM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="Support" src="img/SupportM.png" onmouseover="this.src='img/Support.png';" onmouseout="this.src='img/SupportM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="FAQ" src="img/FAQM.png" onmouseover="this.src='img/FAQ.png';" onmouseout="this.src='img/FAQM.png';" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="Factory" src="img/FactoryM.png" onmouseover="this.src='img/Factory.png';" onmouseout="this.src='img/FactoryM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="Accords" src="img/AccordsM.png" onmouseover="this.src='img/Accords.png';" onmouseout="this.src='img/AccordsM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id=Core" src="img/CoreM.png" onmouseover="this.src='img/Core.png';" onmouseout="this.src='img/CoreM.png';" height="200" width="200"/></div>
+            </div>
+
+        <div class="row" style="background-color: #659965";>
+            <div class="image-container"><img id="People" src="img/PeopleM.png" onmouseover="this.src='img/People.png';" onmouseout="this.src='img/PeopleM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="Flag" src="img/FlagM.png" onmouseover="this.src='img/Flag.png';" onmouseout="this.src='img/FlagM.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="Building" src="img/BuildingM.png" onmouseover="this.src='img/Building.png';" onmouseout="this.src='img/BuildingM.png';" height="200" width="200"/></div>
+        </div>
+        
+        <script>
+            var sound1 = new buzz.sound("sound/support.mp3");
+            var sound2 = new buzz.sound("sound/weirdness.mp3");
+            var sound3 = new buzz.sound("sound/button.mp3");
+            var sound4 = new buzz.sound("sound/doors.mp3");
+
+            window.onload = function() {
+                document.getElementById('Logo').addEventListener('click', function () {sound4.play(); });
+                document.getElementById('Support').addEventListener('click', function () {sound1.play(); });
+                document.getElementById('FAQ').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('Factory').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('Accords').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('Core').addEventListener('click', function () {sound4.play(); });
+                document.getElementById('People').addEventListener('click', function () {sound2.play(); });  
+                document.getElementById('Flag').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('Building').addEventListener('click', function () {sound4.play(); });
+            }
+        </script>
+    </body>
+    
+</html>
